@@ -4,7 +4,7 @@ from buscapecas.buscar_produto import pesquisar_produto
 def home(request):
 
     context = {
-        'titulo' : 'Home',
+        'titulo' : 'Inicio',
     }
 
     return render(request, 'index.html', context)
@@ -15,9 +15,7 @@ def pesquisa(request):
 
         form_data = request.POST
 
-        pesquisa = form_data.get('search')
-
-        pesquisa.replace('ç', 'c')
+        pesquisa = form_data.get('search').replace('ç', 'c')
 
         if pesquisa.strip() == "":
             return render(request, 'index.html')

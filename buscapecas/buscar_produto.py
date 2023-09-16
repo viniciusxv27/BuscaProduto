@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+from operator import itemgetter
 
 def pesquisar_produto(item):
     lista_produtos = []
@@ -39,6 +40,7 @@ def pesquisar_produto(item):
                     "title": f"{titulo.text}",
                     "link": f"{link['href']}",
                     "price": f"{valor}",
+                    "store" : 1,
                 })
                 
                 print('\n\n')
@@ -47,5 +49,5 @@ def pesquisar_produto(item):
 
             except TypeError:
                 break
-
-    return lista_produtos
+            
+    return sorted(lista_produtos, key=itemgetter('price'))

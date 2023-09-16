@@ -26,8 +26,17 @@
                 <div class="card-body">
                 <p class="card-text">{{produto.title}}</p>
                 <h5 class="card-title">R${{produto.price}}.</h5>
+                {% if produto.store == 1 %}
+                    <p class="card-text">Loja: <img width="60px" src="https://logospng.org/download/mercado-livre/logo-mercado-livre-256.png"/></p>
+                {% elif produto.store == 2 %}
+                    <p class="card-text">Loja: <img width="60px" src="https://logospng.org/download/shopee/logo-shopee-256.png"/></p>
+                {% elif produto.store == 3 %}
+                    <p class="card-text">Loja: <img width="60px" src="https://vendedor.magazineluiza.com.br/_nuxt/icons/icon_512x512.d60cf5.png"/></p>
+                {% elif produto.store == 4 %}
+                    <p class="card-text">Loja: <img width="60px" src="https://logospng.org/download/amazon/logo-amazon-256.png"/></p>
+                {% endif %}
                 <br>
-                <a target="_blank" href="{{produto.link}}" class="btn btn-primary">Ver no site oficial</a>
+                <a target="_blank" href="{{produto.link}}" class="btn btn-primary">Ver Preços</a>
                 </div>
             </div>
         </div>
