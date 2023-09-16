@@ -1,2 +1,28 @@
+
+<style>
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-image {
+  animation: rotate 2s linear infinite; 
+}
+
+</style>
+<script>
+    let botao1 = document.getElementById('button-background');
+    let botao = document.getElementById('search-button');
+
+    function carregar() {
+        botao.removeAttribute('class');
+        botao.classList.add('fas', 'fa-spinner', 'loading-image');
+        botao1.style.cursor = "not-allowed";
+    }
+</script>
 </body>
 </html>
