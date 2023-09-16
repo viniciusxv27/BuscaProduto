@@ -24,15 +24,9 @@ def pesquisar_produto(item):
                 real = produto.find('span', class_='andes-money-amount__fraction')
                 centavos = produto.find('span', class_='andes-money-amount__cents')
 
-                print('Foto: ', foto['src'])
-                print('Título do produto:', titulo.text)
-                print('Link do produto:', link['href'])
-
                 if (centavos):
-                    print('Preço do produto: R$', real.text + ',' + centavos.text)
                     valor = real.text + ',' + centavos.text
                 else:
-                    print('Preço do produto: R$', real.text)
                     valor = real.text
 
                 lista_produtos.append({
@@ -43,7 +37,6 @@ def pesquisar_produto(item):
                     "store" : 1,
                 })
                 
-                print('\n\n')
             except AttributeError:
                 break
 
