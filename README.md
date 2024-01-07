@@ -62,4 +62,4 @@ Siga os passos abaixo para configurar e executar o projeto localmente:
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
 
 ## ✒️ Autor
-Desenvolvedor - Vinicius Costa Marcelos
+Desenvolvedor - Vinicius
